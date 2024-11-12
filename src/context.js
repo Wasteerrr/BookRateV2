@@ -20,8 +20,9 @@ const AppProvider = ({children}) => {
                 const newBooks = docs.slice(0, 20).map((bookSingle) => {
                     const {key, author_name, cover_i, edition_count, first_publish_year, title} = bookSingle;
 
+
                     return {
-                        id:key,
+                        id: key,
                         author: author_name,
                         cover_id: cover_i,
                         edition_count: edition_count,
