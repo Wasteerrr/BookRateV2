@@ -25,7 +25,7 @@ useEffect(() => {
       if(data){
         const {description, title, covers, subject_places, subject_times, subjects} = data;
         const newBook = {
-          description: description ? description.value : "Nie znaleziono opisu",
+          description: description ? description : "Nie znaleziono opisu",
           title: title,
           cover_img: covers ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg` : coverImg,
           subject_places: subject_places ? subject_places.join(", ") : "Nie znaleziono miejsc tematycznych",

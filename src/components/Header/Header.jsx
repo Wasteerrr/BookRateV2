@@ -9,11 +9,9 @@ const Header = () => {
       <header className='header'>
         <Navbar />
         <div className='header-content flex flex-c text-center text-white'>
-          <h2 className='header-title text-capitalize'>Znajdź książkę, której szukasz.</h2><br />
-          <p className='header-text fs-18 fw-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aut quia quo at ea necessitatibus adipisci placeat nostrum blanditiis autem omnis alias, maiores commodi dignissimos.</p>
+          <h2 className='header-title text-capitalize'>Znajdź tytuł, który warto poznać</h2><br />
+          <p className='header-text fs-18 fw-3'>Znajdź swoją następną ulubioną książkę, odkryj nowe tytuły, polecane przez społeczność miłośników literatury. Przeglądaj recenzje, oceniaj i dołącz do rozmowy o książkach!</p>
           <SearchForm />
-
-
         </div>
       </header>
 
