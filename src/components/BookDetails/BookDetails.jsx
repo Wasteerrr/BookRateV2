@@ -22,8 +22,10 @@ useEffect(() => {
       console.log(id);
       const response = await fetch(`${URL}${id}.json`);
       const data = await response.json();
+      
       if(data){
         const {description, title, covers, subject_places, subject_times, subjects} = data;
+
         const newBook = {
           description: description ? description : "Nie znaleziono opisu",
           title: title,
