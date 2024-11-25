@@ -68,6 +68,10 @@ if(loading) return <Loading />;
             <span className='fw-6 fs-24'>{book?.title}</span>
           </div>
           
+          <div className='book-details-item rating'>
+            <span className='fw-6'>Placeholder Ocena *****</span>
+          </div>
+          
           <div className='book-details-item description'>
             <span>{book?.description}</span>
           </div>
