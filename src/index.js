@@ -10,23 +10,20 @@ import BookDetails from "./components/BookDetails/BookDetails";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 
-
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AppProvider>
     <BrowserRouter>
       <Routes>
+        {/* Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure Layout wraps the common structure  */}
         <Route path = "/" element = {<Home />}>
-          <Route path = "about" element = {<About />} />
-          <Route path = "book" element = {<BookList />} />
-          <Route path = "/book/:id" element = {<BookDetails />} />
-          <Route path = "login" element = {<Login />} />
-          <Route path = "register" element = {<Register />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/book" element={<BookList />} />
+          <Route path="/book/:id" element={<BookDetails />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
   </AppProvider>
 );
-

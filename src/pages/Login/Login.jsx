@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -17,6 +18,10 @@ const Login = () => {
     }
 
     if (email === 'user@example.com' && password === 'password') {
+      if (rememberMe) {
+        // Logika zapamiętywania użytkownika (np. zapisanie w localStorage)
+        localStorage.setItem('user', email);
+      }
       navigate('/dashboard');
     } else {
       setError('Nieprawidłowy email lub hasło.');
@@ -49,6 +54,20 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+            </div>
+            <div className="form-group">
+              <label htmlFor="remember-me" className="remember-me-label">
+                <input
+                  type="checkbox"
+                  id="remember-me"
+                  checked={rememberMe}
+                  onChange={() => setRememberMe(!rememberMe)}
+                />
+                Zapamiętaj mnie
+              </label>
+              <a href="/reset-password" className="forgot-password-link">
+                Zapomniałeś hasła?
+              </a>
             </div>
             <button type="submit" className="btn btn-primary bg-purple text-white">
               Zaloguj
